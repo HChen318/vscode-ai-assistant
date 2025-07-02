@@ -1,0 +1,74 @@
+请你作为资深VSCode插件/前端/Node.js开发专家，从{入口文件}开始进行系统性的代码审查：
+
+**分析流程**：
+1. 从package.json和extension.js开始，按require/import顺序分析
+2. 遇到模块引用时，深入分析该模块的完整实现
+3. 检查类定义、函数定义、异步处理、VSCode API使用
+4. 分析完成后返回原位置继续
+
+**VSCode插件特定审查点**：
+- package.json配置（contributes、activationEvents、engines等）
+- extension.js主入口文件架构
+- VSCode API正确使用（vscode.commands、vscode.window等）
+- 插件激活/注销生命周期管理
+- Command注册和处理
+- WebView实现和安全性
+- 用户配置管理（workspace/user settings）
+- 插件性能优化（懒加载、异步激活）
+- 错误处理和用户反馈
+- 插件市场发布配置
+
+**JavaScript特定审查点**：
+- ES6+语法使用
+- 异步编程实现（Promise、async/await）
+- 错误处理机制
+- 内存泄漏风险
+- 模块化设计（CommonJS/ES modules）
+- JSDoc文档注释
+- 包管理和依赖
+- 安全最佳实践
+- 性能优化
+- 单元测试和集成测试
+
+**AI对话功能审查点**：
+- WebView与Extension主进程通信
+- AI API集成（OpenAI、Claude等）
+- 消息队列和状态管理
+- 用户输入验证和清理
+- 流式响应处理
+- 对话历史存储
+- 错误重试机制
+- API密钥安全管理
+
+**自定义功能审查点**：
+- 文件系统操作安全性
+- 终端命令执行
+- 工作区文件监听
+- 打包构建集成
+- 进程管理和资源清理
+- 用户权限控制
+- 跨平台兼容性
+
+**关注的问题类型**：
+- VSCode API使用不当
+- WebView安全漏洞（CSP配置）
+- 插件激活性能问题
+- 异步错误处理不当
+- 内存泄漏（事件监听器、disposables）
+- 安全漏洞（命令注入、XSS）
+- 用户体验问题（加载时间、响应性）
+- 代码可维护性和扩展性
+- 依赖安全性和版本兼容
+- 插件冲突和兼容性
+
+**开发最佳实践**：
+- 使用JSDoc提供良好的代码文档
+- 实现proper disposal模式避免内存泄漏
+- 使用vscode.ExtensionContext管理插件状态
+- 遵循VSCode UX指南
+- 实现适当的错误边界和降级策略
+- 使用webpack优化打包大小
+- 配置合适的测试环境和CI/CD
+- 使用严格的ESLint配置保证代码质量
+
+
