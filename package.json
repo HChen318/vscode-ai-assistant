@@ -1,6 +1,6 @@
 {
-  "name": "aissc",
-  "displayName": "AISSC",
+  "name": "ssc-assistant",
+  "displayName": "SSC_ASSISTANT",
   "description": "",
   "version": "0.0.1",
   "engines": {
